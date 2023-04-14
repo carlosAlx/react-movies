@@ -14,7 +14,7 @@ export const Header = () => {
           <div className="logo">
             <img src="./images/logo.png" alt="" />
           </div>
-          <ul className={!mobile ? "flexSB menu_nav" : " nav_menu_mobile"}>
+          <ul className={!mobile ? "flexSB menu_nav" : "nav_menu_mobile"}>
             <li>
               <Link to={""}>Home</Link>
             </li>
