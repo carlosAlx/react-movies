@@ -5,9 +5,8 @@ import { BsPlayCircle } from "react-icons/bs";
 import "./home.css";
 import { Link } from "react-router-dom";
 
-
 export const Card = ({ data }: { data: mediaDetailsType }) => {
-  const [imgPlay, setImgPlay] = useState<string>("./images/play-button.png");
+  const [imgPlay, setImgPlay] = useState<string>("./images/play.png");
   return (
     <div className="box">
       <div className="cover_image">
@@ -62,7 +61,7 @@ export const Card = ({ data }: { data: mediaDetailsType }) => {
       <div className="play_button">
         <Link to={`/watch/"${data.id}`}>
           <button
-            onTouchMove={() => setImgPlay("./images/play.png")}
+            onMouseMove={() => setImgPlay("./images/play.png")}
             onMouseOut={() => setImgPlay("./images/play-button.png")}
           >
             <img src={imgPlay} alt="" />

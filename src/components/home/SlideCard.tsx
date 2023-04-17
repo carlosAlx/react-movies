@@ -1,37 +1,34 @@
-import React from "react";
-import { mediaDetailsType } from "../../data/type";
+import { MouseEventHandler } from "react";
 import { Card } from "./Card";
 import { homeData } from "../../data/data";
-import Slider from "react-slick";
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import Slider, { Settings } from "react-slick";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-const NextArrow = () => {
+interface customArrow {
+  onClick?: MouseEventHandler;
+}
+const NextArrow = ({ onClick }: customArrow) => {
   return (
-    <div>
-      <button>
-        <i className="control_right">
-          <AiOutlineArrowRight className="arrow" />
-        </i>
-      </button>
-    </div>
+    <button  onClick={onClick}>
+      <i className="control_right">
+        <SlArrowRight className="arrow" />
+      </i>
+    </button>
   );
 };
 
-const PrevArrow = (onClick: MouseEvent) => {
-  //  const { onClick } = onClick;
+const PrevArrow = ({ onClick }: customArrow) => {
   return (
-    <div>
-      <button>
-        <i className="control_left">
-          <AiOutlineArrowLeft className="arrow" />
-        </i>
-      </button>
-    </div>
+    <button onClick={onClick}>
+      <i className="control_left">
+        <SlArrowLeft className="arrow" />
+      </i>
+    </button>
   );
 };
 
 export const SlideCard = () => {
-  const settings = {
+  const settings: Settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -40,8 +37,8 @@ export const SlideCard = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    //  nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow onclick={onclick} />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
   return (
     <div className="slide_container">
