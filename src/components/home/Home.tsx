@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import { homeData } from '../../data/data'
-import { SlideCard } from './SlideCard'
+import React, { useState } from "react";
+import { homeData } from "../../data/data";
+import { SlideCard } from "./SlideCard";
 
 export const Home = () => {
   return (
-    <section><SlideCard /></section>
-  )
-}
+    <section className="home_section">
+      <SlideCard />
+    </section>
+  );
+};
