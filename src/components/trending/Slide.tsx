@@ -1,6 +1,5 @@
 import { MouseEventHandler } from "react";
 import { Card } from "./Card";
-import { homeData } from "../../data/data";
 import Slider, { Settings } from "react-slick";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { mediaDetailsType } from "../../data/type";
@@ -28,7 +27,7 @@ const PrevArrow = ({ onClick }: customArrow) => {
   );
 };
 
-export const SlideCard = ({ data }: { data: mediaDetailsType[] }) => {
+export const Slide = ({data}: {data:mediaDetailsType[]}) => {
   const settings: Settings = {
     dots: false,
     infinite: true,
@@ -42,10 +41,12 @@ export const SlideCard = ({ data }: { data: mediaDetailsType[] }) => {
     prevArrow: <PrevArrow />,
   };
   return (
-    <Slider {...settings}>
-      {data.map((item) => (
-        <Card key={item.id} data={item} />
-      ))}
-    </Slider>
+    <div className="slide_container">
+      <Slider {...settings}>
+        {data.map((item) => (
+          <Card key={item.id} data={item} />
+        ))}
+      </Slider>
+    </div>
   );
 };

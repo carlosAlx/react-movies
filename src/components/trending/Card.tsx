@@ -10,7 +10,7 @@ export const Card = ({ data }: { data: mediaDetailsType }) => {
   return (
     <div className="box">
       <div className="cover_image">
-        <img className="img_sldie" src={data.cover} alt="" />
+        <img src={data.cover} alt="" />
       </div>
       <div className="content flex">
         <h1>{data.name}</h1>

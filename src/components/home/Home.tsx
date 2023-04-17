@@ -5,7 +5,7 @@ import { SlideCard } from "./SlideCard";
 export const Home = () => {
   return (
     <section className="home_section">
-      <SlideCard />
+      <SlideCard data={homeData}/>
     </section>
   );
 };
