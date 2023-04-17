@@ -28,7 +28,8 @@ ul, li {
 
 .container {
   max-width: 90%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
@@ -170,4 +171,30 @@ ul, li {
 
 .cast span {
   color: red;
+}
+
+section {
+  margin-block-end: 50px;
+}
+
+footer {
+  position: relative;
+  background-color: #191919;
+}
+
+.flex_column{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #fff;
+  gap: 1rem;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+footer p{
+  max-width: 500px;
+
 }

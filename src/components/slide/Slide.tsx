@@ -3,6 +3,7 @@ import { upcome } from "../../data/data";
 import Slider, { Settings } from "react-slick";
 import { Cards } from "./Cards";
 import { mediaCardType } from "../../data/type";
+import { NextArrow, PrevArrow } from "./CustomArrow";
 
 export const Slide = ({data}:{data:mediaCardType[]}) => {
     const settings:Settings = {
@@ -11,6 +12,8 @@ export const Slide = ({data}:{data:mediaCardType[]}) => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
               breakpoint: 1030,
