@@ -1,3 +1,38 @@
+.home_section {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  margin: 0;
+  overflow: hidden;
+}
+
+.cover_image {
+  position: absolute;
+  width: 100%;
+  inset: 1;
+  z-index: -99;
+  border: 1px solid #fff;
+}
+
+.img_slide {
+  object-fit: contain;
+  z-index: -2;
+  right: 0;
+  margin: 0 !important;
+}
+
+.slide_container h1 {
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 800;
+  background-image: url("../../../public/images/texure.jpg");
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
 .box .btn {
   display: flex;
   align-items: center;
@@ -15,50 +50,7 @@
   margin: auto;
   width: 100%;
   height: 80vh;
-}
 
-.home_section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  margin: 0;
-  overflow: hidden;
-}
-
-.cover_image {
-  position: absolute;
-  width: 100%;
-  height: 500px;
-  z-index: -8;
-}
-
-.img_slide{   
-  width: auto;
-  object-fit: cover;
-  z-index: -9;
-}
-
-.cover_image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -4;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-}
-
-.slide_container h1 {
-  font-size: 90px;
-  text-transform: uppercase;
-  font-weight: 800;
-  background-image: url("../../../public/images/texure.jpg");
-  background-repeat: repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
 }
 
 .box .content {
@@ -116,4 +108,20 @@
 
 .cast span {
   color: red;
+}
+
+@media screen and (max-width:1024px) {
+  .box {
+    height: 600px;
+  }
+
+  .box .content {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .play_button {
+    display: none;
+  }
+
 }

@@ -20,6 +20,10 @@ ul, li {
 
 }
 
+p {
+  line-height: 2rem;
+}
+
 .flexSB {
   display: flex;
   justify-content: space-between;
@@ -60,10 +64,9 @@ ul, li {
   margin-top: 30px;
 }
 
-/*slide* **/
+/* slide */
 .control_left {
   position: absolute;
-
   border: 1px solid #fff;
   top: 50%;
   left: 10px;
@@ -104,97 +107,57 @@ ul, li {
   transform: scale(140%);
 }
 
-.slide_container h1 {
-  font-size: 90px;
-  text-transform: uppercase;
-  font-weight: 800;
-  background-image: url("../../../public/images/texure.jpg");
-  background-repeat: repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-font-smoothing: antialiased;
-}
-
-.box .content {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1rem;
-  width: 45%;
-  margin: auto;
-}
-
-.details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
-
-.details span {
-  background-color: cadetblue;
-  padding: 0.5rem;
-}
-
-.rating {
-  display: flex;
-}
-
-.rating i {
-  color: red;
-}
-
-.play_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-}
-
-.play_button button {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  gap: 1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: x-large;
-}
-
-.play_button img {
-  width: 6rem;
-}
-
-.cast span {
-  color: red;
-}
 
 section {
   margin-block-end: 50px;
 }
 
+/*-- footer --*/
 footer {
   position: relative;
   background-color: #191919;
+  padding: 40px 0;
+  color: #fff;
 }
 
-.flex_column{
+.list {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  border: 1px solid #fff;
   gap: 1rem;
 }
 
-.flex{
-  display: flex;
-  justify-content: space-between;
+.list i {
+  font-size: large;
 }
-footer p{
-  max-width: 500px;
 
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .box {
+    height: 600px;
+  }
+
+  .box p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

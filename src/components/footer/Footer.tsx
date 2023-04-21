@@ -9,9 +9,9 @@ import {
 export const Footer = () => {
   return (
     <footer>
-      <div className="container flex">
+      <div className="container grid">
         <div className="flex_column">
-          <ul className="flexSB">
+          <ul className="list">
             <li>Terms of Use</li>
             <li>Privacy-Policy</li>
             <li>Blog</li>
@@ -27,7 +27,7 @@ export const Footer = () => {
         </div>
         <div className="flex_column">
           <a>Follow Us</a>
-          <div className="flexSB">
+          <div className="list">
             <i>
               <SiFacebook />
             </i>
